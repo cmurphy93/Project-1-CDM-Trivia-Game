@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>CDM's Trivia Game</title>
+</head>
+<body>
+    <div class="timer-container">
+    <div class="base-timer">
+        <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="">
+          <g class="base-timer__circle">
+            <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45" />
+          </g>
+          <text class="base-timer__text" x="50" y="60">15</text>
+        </svg>
+      </div>
+    </div>    
+  <div id="question-container">
+    <h1 id="question">Question goes here</h1>
+    <div id="options">
+        <button onclick="selectOption(questions[currentQuestionIndex].options[0])">9.3 million</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[1])">39 million</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[2])">93 million</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[3])">193 million</button>    
+        <button onclick="selectOption(questions[currentQuestionIndex].options[0])">Albert Einstein</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[1])">Niels Bohr</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[2])">Isaac Newton</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[3])">Enrico Fermi</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[0])">India</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[1])">Peru</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[2])">Canada</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[3])">Iceland</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[0])">Baghdad</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[1])">New Delhi</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[2])">Cairo</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[3])">Moscow</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[0])">Nine Iron</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[1])">Sand Wedge</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[2])">Six Iron</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[3])">Seven Iron</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[0])">Hamlet</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[1])">Romeo</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[2])">Macbeth</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[3])">Darren</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[0])">Your holiness</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[1])">Your honor</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[2])">Your eminence</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[3])">You da man!</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[0])">October</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[1])">June</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[2])">July</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[3])">August</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[0])">22</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[1])">21</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[2])">15</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[3])">19</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[0])">A port of entry</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[1])">A border marker</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[2])">A gift shop</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[3])">A lighthouse</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[0])">The Ramones</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[1])">Joy Division</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[2])">The Bee Gees</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[3])">Blondie</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[0])">Napoleon</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[1])">Adolph Hitler</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[2])">Atilla the Hun</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[3])">Marie Antoinette</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[0])">Elf</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[1])">Buddy</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[2])">Sam</button>
+        <button onclick="selectOption(questions[currentQuestionIndex].options[3])">Billy</button>
+  </div>  
+  </div>
+  <div id="result"></div>
+  <div class="score-box">
+    <span>Score: <span id="score">0</span> out of 15 correct </span>  
+    <ul>
+       <li id='score-15'><span>15</span></li>     
+       <li id='score-14'><span>14</span></li> 
+       <li id='score-13'><span>13</span></li> 
+       <li id='score-12'><span>12</span></li> 
+       <li id='score-11'><span>11</span></li> 
+       <li id='score-10'><span>10</span></li> 
+       <li id='score-9'><span>9</span></li> 
+       <li id='score-8'><span>8</span></li> 
+       <li id='score-7'><span>7</span></li> 
+       <li id='score-6'><span>6</span></li> 
+       <li id='score-5'><span>5</span></li>
+       <li id='score-4'><span>4</span></li> 
+       <li id='score-3'><span>3</span></li>  
+       <li id='score-2'><span>2</span></li>
+       <li id='score-1'><span>1</span></li>  
+    </ul>     
+</div>    
+  <script src="script.js"></script>
+</body>
+
+</html>
