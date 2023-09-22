@@ -135,8 +135,8 @@ function selectOption(selectedOption) {
     const optionsList = document.getElementById('options');
     const buttons = optionsList.getElementsByTagName('button');
 
-    for (const button of buttons) {
-        if (button.textContent === currentQuestion.correctAnswer) {
+    for(const button of buttons) {
+        if(button.textContent === currentQuestion.correctAnswer) {
             button.classList.add('options-correct');
         } else if (button.textContent === selectedOption) {
             button.classList.add('options-incorrect');
@@ -152,9 +152,7 @@ function selectOption(selectedOption) {
 
     document.getElementById('score').textContent = score;
 
-    // Increment the currentQuestionIndex after updating the score status
-    currentQuestionIndex++;
-
+    currentQuestionIndex++; //
     if (currentQuestionIndex < questions.length) {
         displayQuestion();
     } else {
@@ -162,10 +160,16 @@ function selectOption(selectedOption) {
     }
 }
 
-function updateScoreStatus(correct) {
-    const questionNumber = currentQuestionIndex + 1;
-    const scoreListItem = document.getElementById(`score-${questionNumber}`);
+let currentQuestionIndex = 0;
+let score = 0;
+ 
+  function updateScoreStatus(correct) {
+    //let's check what the question index is right now....
+    console.log(currentQuestionIndex);
 
+    const questionNumber = questions.length - currentQuestionIndex;
+    const scoreListItem = document.getElementById(`score-${questionNumber}`);
+    
     if (scoreListItem) {
         const statusSpan = scoreListItem.querySelector('span');
 
@@ -179,10 +183,8 @@ function updateScoreStatus(correct) {
     }
 }
 
-let currentQuestionIndex = 0;
-let score = 0;
-
 document.addEventListener('DOMContentLoaded', () => {
     shuffleQuestions();
+    updateScoreStatus();
     displayQuestion();
 });
