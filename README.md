@@ -20,7 +20,4 @@ Wireframes:
 
 Unsolved problems:
 -Including a start page before the countdown timer begins
--Countdown timer-text stays the same
--Currently, questions that have already appeared may be reshuffled again
 -Adding images above the question-container 
--The score-box does not alter upon answering the first question, however it does for all other questions but also not including the final one
